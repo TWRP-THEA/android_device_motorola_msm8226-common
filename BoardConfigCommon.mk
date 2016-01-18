@@ -140,7 +140,7 @@ TW_NO_SCREEN_TIMEOUT := true
 TW_NO_USB_STORAGE := false
 TW_NO_USB_STORAGE := true
 TW_TARGET_USES_QCOM_BSP := true
-TW_THEME := portrait_hdpi_hq
+TW_THEME := portrait_hdpi
 
 # Wifi
 BOARD_HAS_QCOM_WLAN := true
