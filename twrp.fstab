@@ -10,5 +10,5 @@
 /dev/block/platform/msm_sdcc.1/by-name/boot         /boot        emmc    defaults                                                                       recoveryonly
 /dev/block/platform/msm_sdcc.1/by-name/recovery     /recovery    emmc    defaults                                                                       recoveryonly                                                     backup=1
 # SDCard
-/devices/msm_sdcc.2/mmc_host*                       auto         auto    defaults                                                                       voldmanaged=sdcard1:auto,encryptable=userdata                    twrp=display="Micro SDcard";storage;wipeingui;removable
+/dev/block/mmcblk1p1                                /sdcard1     auto    defaults                                                                       voldmanaged=sdcard1:auto,encryptable=userdata                    twrp=display="Micro SDcard";storage;wipeingui;removable
 /devices/platform/msm_hsusb_host/usb*               auto         auto    defaults                                                                       voldmanaged=usb:auto                                             twrp=display="USB OTG";storage;wipeingui;removable
