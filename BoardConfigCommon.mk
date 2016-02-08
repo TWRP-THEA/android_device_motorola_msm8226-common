@@ -41,7 +41,7 @@ TARGET_BOOTLOADER_BOARD_NAME := MSM8226
 TARGET_NO_BOOTLOADER := true
 
 # Kernel
-BOARD_KERNEL_CMDLINE := androidboot.bootdevice=msm_sdcc.1 androidboot.hardware=qcom vmalloc=400M utags.blkdev=/dev/block/platform/msm_sdcc.1/by-name/utags androidboot.selinux=permissive
+BOARD_KERNEL_CMDLINE := androidboot.hardware=qcom vmalloc=400M androidboot.selinux=permissive
 BOARD_KERNEL_BASE := 0x00000000
 BOARD_KERNEL_PAGESIZE := 2048
 BOARD_KERNEL_SEPARATED_DT := true
@@ -107,7 +107,6 @@ TARGET_RIL_VARIANT := caf
 # Recovery
 COMMON_GLOBAL_CFLAGS += -DNO_SECURE_DISCARD
 TARGET_RECOVERY_FSTAB := $(VENDOR_PATH)/rootdir/etc/fstab.qcom
-TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
 TARGET_USERIMAGES_USE_EXT4 := true
 TARGET_USERIMAGES_USE_F2FS := true
 BOARD_RECOVERY_SWIPE := true
@@ -125,17 +124,14 @@ BOARD_CUSTOM_BOOTIMG_MK := $(VENDOR_PATH)/mkbootimg.mk
 TW_THEME := portrait_hdpi
 DEVICE_RESOLUTION := 720x1280
 HAVE_SELINUX := true
-RECOVERY_GRAPHICS_USE_LINELENGTH := true
 RECOVERY_SDCARD_ON_DATA := true
 TW_IGNORE_MAJOR_AXIS_0 := true 
 TW_DEFAULT_EXTERNAL_STORAGE := true
 TW_INCLUDE_L_CRYPTO := true 
-TW_NO_USB_STORAGE := true
 TW_NO_SCREEN_BLANK := true
-TW_SCREEN_BLANK_ON_BOOT := false
+TW_INCLUDE_NTFS_3G := true
 TW_TARGET_USES_QCOM_BSP := true 
 
-TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/platform/msm_hsusb/gadget/lun%d/file
 BOARD_HAS_LARGE_FILESYSTEM := true
 
 # Wifi
