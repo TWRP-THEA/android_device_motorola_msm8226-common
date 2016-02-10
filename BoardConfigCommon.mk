@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2014 The CyanogenMod Project
+# Copyright (C) 2016 The CyanogenMod Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -41,7 +41,7 @@ TARGET_BOOTLOADER_BOARD_NAME := MSM8226
 TARGET_NO_BOOTLOADER := true
 
 # Kernel
-BOARD_KERNEL_CMDLINE := androidboot.hardware=qcom vmalloc=400M androidboot.selinux=permissive
+BOARD_KERNEL_CMDLINE := androidboot.bootdevice=msm_sdcc.1 androidboot.hardware=qcom vmalloc=400M androidboot.selinux=permissive
 BOARD_KERNEL_BASE := 0x00000000
 BOARD_KERNEL_PAGESIZE := 2048
 BOARD_KERNEL_SEPARATED_DT := true
@@ -125,14 +125,9 @@ TW_THEME := portrait_hdpi
 DEVICE_RESOLUTION := 720x1280
 HAVE_SELINUX := true
 RECOVERY_SDCARD_ON_DATA := true
-TW_IGNORE_MAJOR_AXIS_0 := true 
 TW_DEFAULT_EXTERNAL_STORAGE := true
-TW_INCLUDE_L_CRYPTO := true 
-TW_NO_SCREEN_BLANK := true
+TW_INCLUDE_CRYPTO := true
 TW_INCLUDE_NTFS_3G := true
-TW_TARGET_USES_QCOM_BSP := true 
-
-BOARD_HAS_LARGE_FILESYSTEM := true
 
 # Wifi
 BOARD_HAS_QCOM_WLAN := true
